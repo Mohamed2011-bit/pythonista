@@ -1,0 +1,87 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+
+.container-fluid {
+  padding: 60px 50px;
+}
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo {
+    font-size: 200px;
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+  }
+  .about h2,.values h3, h1{
+    color:rgb(56, 114, 165)
+  
+  }
+ /*/////////////////////////////////////////////////////////////////////////////////////// */
+.jumbotron {
+  background-color: #5f788a;
+  color: #fff;
+  padding: 100px 25px;
+}
+
+.jumbotron{
+  background-image: url('../../home/images/python2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width:100%
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////// */
+ul.list-line  {
+ padding:1rem;
+  height:100px
+}
+
+ul.list-line li{
+  background-color:rgb(12, 101, 237);
+  list-style-type: none;
+  height: 2.5px;
+}
+
+ul.list-line li:first-child{
+  width: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+ul.list-line li:last-child{
+  width: 10rem;
+}
+ul.line-color1{
+  direction: rtl;
+}
+
+
+
+
+/* /////////////// */
+/*our__team*/
+
+.our__team,.latest__blog {
+  background-color:rgb(249, 249, 249)
+}
+div.card{
+  height: 37rem;
+  padding: 1rem;
+  border:0;
+  border-radius: 5px;
+}
+ div.card img{
+  border-radius: 5px;
+
+}
+

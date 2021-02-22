@@ -1,0 +1,106 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+/* //////////////////////////////////////////////////////////////////////// */
+
+/* StartMain */
+
+div.jumbotron{
+  background-image: url("../images/python2.jpg")!important;
+  background-size: cover;
+  background-attachment: fixed;
+  width:100%
+
+}
+
+.jumbotron{
+    color: rgba(245, 245, 245,0.8);
+    margin-bottom:0px!important;
+    
+}
+#main-video{
+  top:20%;
+  right:10%
+}
+/* //////////////////////////////////////////////////////////////////////// */
+
+.topics h3{
+  color:rgb(56, 114, 165)
+
+}
+.carousel {
+    background:#444;
+  }
+  
+  /*
+  Forces image to be 100% width and not max width of 100%
+  */
+  .carousel-item .img-fluid {
+    width:100%;
+    height:auto;
+  }
+  
+  /* 
+  anchors are inline so you need ot make them block to go full width
+  */
+  .carousel-item a {
+    display: block;
+    width:100%;
+    color:black!important
+  }
+  
+/* //////////////////////////////////////////////////////////////////////// */
+
+/* video-custom */
+
+ .video2-custom{
+   
+   margin: auto;
+   height:100%;
+   padding:2rem
+  }
+  
+  .video2-custom .card{
+    border:0!important;
+
+  }
+  .video1-custom{
+    height:auto;
+    /* margin: 1rem 0 0 0;
+    padding:2rem 0 0 2rem */
+  }
+  .videos-custom{
+    justify-content: center;
+   margin: auto;
+   padding:2rem 0 
+
+  }
+  /* ////////////////////////////////////////////////////////////////////// */
+  
+  ul.list-line  {
+    /* margin: 1.5rem; */
+    height:100px;
+    padding: 1rem;
+  }
+  
+  ul.list-line li{
+    background-color:rgb(12, 101, 237);
+    list-style-type: none;
+    height: 2.5px;
+  }
+  
+  ul.list-line li:first-child{
+    width: 4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  ul.list-line li:last-child{
+    width: 10rem;
+    margin-bottom: 0.5rem;
+  }
+  ul.line-color1{
+    direction: rtl;
+  }

@@ -1,0 +1,62 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>About</title>
+{% endblock %}
+
+{% block css %}
+​  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="{% static 'home/css/about.css' %}">
+{% endblock %}
+
+
+<body>
+    {% block content %}
+    <main> 
+        <div class="jumbotron text-center" style="background: url({% static 'home/images/python2.jpg' %}) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; opacity: 0.8;">
+            <h1>Pythonista</h1> 
+            <p style="text-align: left">If you are a complete beginner to programming, then Pythonista tutorial is the best choice for you to learn to code. You can become a Pythonista by learning the fundamentals of Python language. If you are already familiar with the fundamentals of the language and you want to take your Python skills to the next level, then I recommend you to do some projects using Python.</p>
+            <p style="text-align: left">Pythonista is someone who uses the python programming language to do his work. They are programmers who are loyal fans of the Python language.</p>
+            <p style="text-align: left">Pythonistas are the ones that always think of new ideas and create new things using Python, they seem to be the ones who are likely the leaders talking about Python programming.</p>
+        </div>     
+          <!-- Container (About Section) -->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-8">
+                <h2>About Pythonista</h2>
+                <p>Pythonista's tutorial is designed for software programmers who need to learn Python programming language from scratch. <br>You should have a basic understanding of Computer Programming terminologies. <br>No basic understanding of any of the programming languages is a required. <br>All you need is a curious mind, willingness to embrace learning a new skill & determination not to give up in the face of errors. </p>
+              </div>
+              <div class="col-sm-4">
+                <span class="glyphicon glyphicon-qrcode logo"></span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="container-fluid bg-grey">
+            <div class="row">
+              <div class="col-sm-4">
+                <span class="glyphicon glyphicon-fire logo"></span>
+              </div>
+              <div class="col-sm-8">
+                <h2>Our Values</h2>
+                <h3><strong>MISSION:</strong></h3>
+                    <p>we focus on just one thing: we help people learn Python programming. We do not offer lots of different courses in different languages or using robots or gaming platforms that often serve more as a distraction than anything else.</p>      
+                <ul>
+                    <li>A student needs to first learn the fundamentals of programming, and learn them well, before they can well and truly apply these to more narrow applications such as robotics or writing advanced games.</li>
+                    <li>Coding, when taught properly, is engaging in its own right and doesn't need gadgets.</li>
+                    <li>The priority is to learn coding, and not a coding language. So trying to learn several languages at once is not only not necessary but also counterproductive.</li>
+                </ul>
+                <h3><strong>VISION:</strong></h3>
+                    <p>Most tutorials assume that you need to learn all of Python syntax before you can start doing anything interesting. This is what leads to months spent just on syntax, when what you really want to be doing is analyzing data, or building a website, or creating an autonomous drone.
+
+                    This is what leads to your motivation ebbing away, and to you just calling the whole thing off. I like to think of this as the “cliff of boring”. You need to be able to climb the “cliff of boring” to make it to the “land of interesting stuff you work on” (better name pending).</p>
+              </div>
+            </div>
+          </div>
+          
+    </main>
+    {% endblock %}
+   

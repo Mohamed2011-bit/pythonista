@@ -1,0 +1,974 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Tutorial Page</title>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'tutorial/css/tutorial.css' %}">
+{% endblock %}
+
+<body>
+    {% block content %}
+    <div class="container-fluid">
+      <div class="row">
+          <aside style="margin-top: 56px; overflow-y: scroll;" class="col-2 px-0 fixed-top" id="left">
+              <div class="list-group w-100">
+                  <a href="#Download" class="list-group-item">Download Python</a>
+                  <a href="#Printing" class="list-group-item">Printing In Python </a>
+                  <a href="#Variables" class="list-group-item">Variables</a>
+                  <a href="#Input" class="list-group-item">Getting User Input</a>
+                  <a href="#Comments" class="list-group-item">Writing Comments</a>
+                  <a href="#Operators" class="list-group-item">Operators</a>
+                  <a href="#Expressions" class="list-group-item">Expressions</a>
+                  <a href="#Conditional" class="list-group-item">Conditional Statements</a>
+                  <a href="#Loops" class="list-group-item">Loops</a>
+                  <a href="#Range" class="list-group-item">Range</a>
+                  <a href="#Functions" class="list-group-item">Functions</a>
+                  <a href="#Strings" class="list-group-item">Strings</a>
+                  <a href="#Lists" class="list-group-item">Lists</a>
+                  <a href="#List_functions" class="list-group-item">List functions</a>  
+                  <a href="#Dictionaries" class="list-group-item">Dictionaries</a>
+                  <a href="#Tuples" class="list-group-item">Tuples </a>
+                  <a href="#Mutable_Immutable" class="list-group-item">Mutable vs Immutable Data Types</a>
+                  <a href="#Sets" class="list-group-item">Sets</a>
+                  <a href="#String_Formatting" class="list-group-item">String Formatting</a>
+                  <a href="#Modules" class="list-group-item">Modules</a>
+              </div>
+          </aside>
+          <main class="col-10 invisible">
+              <!--hidden spacer-->
+          </main>
+          <main class="col offset-2 h-100">
+              <!-- <div class="row bg-light">
+                  <div class="col-12 py-4">
+                      Hello
+                  </div>
+              </div> -->
+              <div class="row bg-white">
+                  <div class="col-12 py-4">
+                    <h4 id="Download">Download Python</h4>
+                      <p>
+                        Before starting to learn the basics of the language, you need to install Python software in your system.
+                        So, go to this <a href="https://www.python.org/downloads/">link</a> and download Python. <br>
+                        We will be using Python 3 (not the old Python 2 version).<br>
+                        If you don’t want to install any software, just go to <a href="https://repl.it/">repl.it</a> and get started quickly. <br>
+                        Select Python 3 as your language, and click “create repl”. <br>
+
+                      <hr>
+
+                      <h4 id="Printing">Printing in Python</h4>
+                        <p>We can print something in Python using the print statement, followed by a parenthesis, which contains the things we want to print. <br>
+                          If we want to print a text or string, we will write the text inside parenthesis surrounded by either single-quotes or double-quotes.</p>
+                          
+                          <code>print("hello world")</code>
+
+                        <p>This code will print the string “hello world” as the output.
+                          If we want to print a numeric value or a variable, we will write it inside parenthesis without using quotes. I will tell you what a variable is in a moment.
+                          Now, let’s see an example of printing a numeric value.</p>
+
+                          <code>print(1500)</code>
+
+                        <p>This code will print the number 1500. </p>
+                        <p>Note: A Python program is saved using the extension ” .py “.</p>
+
+                        <img src="{% static 'tutorial/images/p1.png' %}">
+
+                      <hr>
+
+                      <h4 id="Variables">Variables</h4>
+                      <p>
+                        We use variables in Python to store values. We can assign the variable a name.
+                        We can use letters, numbers, and underscore while naming a variable.
+                      </p>
+
+                      <p>
+                        A variable name should not begin with numbers. It can begin with either a letter or an underscore.
+                        In Python, we don’t need to explicitly initialize a variable, they can be dynamically used without specifying their datatype
+                      </p>
+
+                        <code>applesCount = 50</code><br>
+                        <code>print(applesCount)</code><br>
+
+                      <img src="{% static 'tutorial/images/variables.png' %}">
+
+                      <hr>
+
+                      <h4 id="Input">Getting User Input</h4>
+                      <p>
+                        Getting input from the user is an important task in programming. We can use the user input to do the required operations and produce the output.<br> 
+                        In Python, user input is obtained by using the input() method. You can store the user input in a variable and use it for required operations.
+                      </p>
+                        
+                        <code>number =  input()</code><br>
+
+                        <p>
+                          We can also give instructions to the user for typing in the required input. These instructions can be written inside parentheses as an argument of the input() method.
+                        </p>
+                        <code>backgroundColor = input(" Enter a color: ")</code><br>
+                        <p>
+                          This program will ask the user to enter the name of a color. The user can enter the name of a color, and it will be stored in the variable as a string.
+                        </p>
+
+                        <img src="{% static 'tutorial/images/input.png' %}">
+
+                      <hr>
+
+                      <h4 id="Comments">Writing Comments</h4>
+                      <p>
+                        We use comments in Python for a better understanding of code. These are ignored by the compiler, and the machine does not care about them. So, we can write whatever we want as comments in the code. Comments are written only for humans to read so that they get a swift and solid understanding of the code. If you use it correctly, it’ll be helpful to read and understand your code for other programmers as well.
+                        In Python, single-line comments are created by using the # symbol. We can write our comments just after the # symbol. 
+                      </p>
+                      <code>#This is a single line comment</code><br>
+                      <p>
+                        Multiple line comments are created by placing the comment between  ”’  and  ”’.
+                      </p>
+
+                      <code>''' This is<br>
+                        a multiple-line<br>
+                        comment '''</code>
+
+                        <hr>
+
+                        <h4 id="Operators">Operators in Python</h4>
+                        <p>
+                          Operators are predefined symbols that can carry out particular operations. The participants of the operation are called operands.
+                          There are many different types of operators available in Python.<br> 
+                          There are also two different types of arithmetic operators, <strong>unary</strong> & <strong>binary</strong>.<br>
+                          <ol>
+                            <li><strong>Unary</strong> operators operate on a single operand.</li>
+                            <li><strong>Binary</strong>Operators applied to two operands.</li>
+                          </ol>
+                           We can generally categorize them into the following types:</p>
+
+                          <ul>
+                            <li><strong>Arithmetic</strong> operators</li><br>
+                            <p>
+                              Symbols that can do arithmetic calculations. In general, there are five of them.
+                            </p>
+                            <div class="table-responsive"> 
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Operators</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Addition (+)</td>
+                                  <td>Carry out the addition of two operands</td>
+                                </tr>
+                                <tr>
+                                  <td>Subtraction (-)</td>
+                                  <td>Carry out the subtraction of two numbers</td>
+                                </tr>
+                                <tr>
+                                  <td>Multiplication (*)</td>
+                                  <td>Multiply two operands</td>
+                                </tr>
+                                <tr>
+                                  <td>Division (/)</td>
+                                  <td>Divide two operands</td>
+                                </tr>
+                                <tr>
+                                  <td>Modulus (%)</td>
+                                  <td>Gives the reminder value after the division of two operands</td>
+                                </tr>
+                                <tr>
+                                  <td>Exponent (**)</td>
+                                  <td>Gives the power value of a number</td>
+                                </tr>
+                                <tr>
+                                  <td>Quotient (//)</td>
+                                  <td>Find the quotient after dividing two numbers</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <li><strong>Increment</strong> and <strong>Decrement</strong> operators</li><br>
+                          <div class="table-responsive"> 
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Operators</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Increment (++)</td>
+                                  <td>Adding 1 to the number</td>
+                                </tr>
+                                <tr>
+                                  <td>Decrement (--)</td>
+                                  <td>Subtracting 1 from a number</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <li><strong>Relational</strong> operators</li><br>
+                          <p>
+                            We can use relational operators for comparing two numbers to find the relation between them. The relational operators that are available in Python are:
+                          </p>
+                          <div class="table-responsive"> 
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Operators</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Equality (==)</td>
+                                  <td>Checks whether the operand values are equal</td>
+                                </tr>
+                                <tr>
+                                  <td>Not Equal (!=)</td>
+                                  <td>Check whether operand values are not equal</td>
+                                </tr>
+                                <tr>
+                                  <td>Greater than (>)</td>
+                                  <td>Checks whether the first operand is greater than the second one</td>
+                                </tr>
+                                <tr>
+                                  <td>Less than (<)</td>
+                                  <td>Checks whether the first operand is greater than the second one</td>
+                                </tr>
+                                <tr>
+                                  <td>Greater than or Equal (>=)</td>
+                                  <td>Checks whether the first operand is greater than or equal the second one</td>
+                                </tr>
+                                <tr>
+                                  <td>Less than or Equal (<=)</td>
+                                  <td>Checks whether the first operand is less than or equal the second one</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <li><strong>Logical</strong> operators</li><br>
+                          <p>
+                            We can use logical operators to obtain true or false values. There are mainly 3 logical operators:
+                          </p>
+                          <div class="table-responsive"> 
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Operators</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>and</td>
+                                  <td>Returns true if both the operands on it’s either side are true</td>
+                                </tr>
+                                <tr>
+                                  <td>or</td>
+                                  <td>Returns true if any of the operands on it’s either side are true</td>
+                                </tr>
+                                <tr>
+                                  <td>not</td>
+                                  <td>Reverse the logical state of an operand</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <li><strong>Assignment</strong> operator</li><br>
+                          <div class="table-responsive"> 
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Operators</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Simple</td>
+                                  <td>used as the assignment operator in Python. This operator assigns a value to a variable<br>
+                                  For example: <br>
+                                a = 5
+                              </td>
+                                </tr>
+                                <tr>
+                                  <td>Compound</td>
+                                  <td>Used to do addition and assignment within a single line of code.<br>
+                                  For example:<br>
+                                  a = 5<br>
+                                a += 5<br>
+                                a = 10
+                              </td>  
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          </ul>
+
+                          <hr>
+
+                          <h4 id="Expressions">Expressions in Python</h4>
+                          <p>
+                            An expression in Python consists of operators and operands. The operands may be either constants or variables.
+                            According to the type of result, we can classify expressions into arithmetic expressions and logical expressions.
+                          </p>
+
+                            <ul>
+                              <li><strong>Arithmetic</strong> Expressions</li>
+                              <p>If an expression contains only arithmetic operators, it is called arithmetic expression. The result of an arithmetic expression will always be a numeric value.
+                                For example;
+                                <br>a + b.
+                              </p>
+
+                              <p>They are of two types:</p>
+                              <ol>
+                                <li>Integer expressions</li>
+                                <li>Real expressions (floating-point expressions)</li>
+                              </ol><br>
+
+                              <li><strong>Logical</strong> Expressions</li>
+                              <p>
+                                If the result of the expression is either logic 1 (true) or logic 0 (false), then the expression is called logical expression. <br>
+                                A logical expression may contain constants, variables, logical operators, and relational operators. For example:
+                              </p>
+                                a <= b
+                            </ul>
+
+                            <hr>
+
+                            <h4 id="Conditional">Conditional Statements in Python</h4>
+                            <p>
+                              The three conditional statements used in Python are <strong>if</strong>, <strong>elif</strong> and <strong>else</strong>. We can use these statements wisely to perform many tasks that involve some conditional checking.
+                            </p>
+
+                            <ol>
+                              <li>if statement</li>
+                              <p>Determine what the program should do next after the statement is evaluated.</p>
+
+                              <li>else statement</li>
+                              <p>Runs if the if statement is false. </p>
+
+                              <li>elif statement</li>
+                              <p>Include multiple if statements into one code block to handle various cases. </p>
+                            </ol>
+
+                            <code>
+                              if condition:<br>
+                              &nbsp; &nbsp;statements<br>
+                              elif condition:<br>
+                              &nbsp; &nbsp;statements<br>
+                              else:<br>
+                              &nbsp; &nbsp;statements
+                            </code>
+
+                            <hr>
+
+                            <h4 id="Loops">Loops in Python</h4>
+                            <p>
+                              Loops allow us to execute a statement or group of statements multiple times. Thus we can reduce the burden of repeatedly writing a piece of code many times.
+                            </p>
+
+                            <ul>
+                              <li><strong>While</strong> loop</li>
+                              <p>
+                                Checks a condition and executes the task if the condition is satisfied
+                              </p>
+                              
+                              <code>while condition:<br>
+                                &nbsp;&nbsp;statements</code>
+
+                              <p>We use the <strong>break</strong> statement to <strong>end</strong> a loop prematurely.<br> 
+                                We also use <strong>continue</strong> statement to <strong>stop</strong> current iteration & <strong>continue</strong> with the next one.  </p>
+                              
+                                <p> Let’s look at an example. </p>
+
+                                <code>count=1<br>
+                                while count<=5:<br>
+                                &nbsp;&nbsp; print(count)<br>
+                                &nbsp;&nbsp; count = count+1</code>
+
+                                <p>The output of this code will be:</p>
+
+                                <img src="{% static 'tutorial/images/while.png' %}"><br>
+
+                                <li><strong>For</strong> loop</li>
+                                <p>
+                                  Iterating through a list using a while loop requires quite a lot of code. For loop commonly used to repeat some code a certain number of times.
+                                </p>
+                                <p>Let’s see an example:</p>
+
+                                <code>words = ['hello','world','hi']<br>
+                                  for word in words:<br>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;print(word)</code>
+
+                                <p>This code prints all the three words separately as output.</p>
+                                
+                                <img src="{% static 'tutorial/images/for.png' %}">
+                                
+                                <p>We can also do this by combining for loops with range objects.</p>
+                                
+                                <p>For example:</p>
+                                
+                                <code>for i in range(3):<br>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;print('hello')</code>
+                                
+                                <p>This code prints hello three times as output.</p>
+
+                                <img src="{% static 'tutorial/images/for2.png' %}">
+                              </ul>
+
+                              <hr>
+
+                              <h4 id="Range">Range</h4>
+                              <p>The range function creates a sequential list of numbers.<br>
+                              For example:</p>
+                              
+                              <code>numbers = list(range(10))<br>
+                                print(numbers)</code>
+                              <p>This will produce an output like: [0,1,2,3,4,5,6,7,8,9].</p>
+                              <p>We can use two arguments to set the starting and ending points.<br>
+                                For example:</p>
+                              
+                                <code>numbers = list(range(3,10))<br>
+                                  print(numbers)</code>
+
+                              <p>This will give the output like: [3,4,5,6,7,8,9]</p>
+                              <p>The range method can have a third argument, which determines the interval of the sequence produced.<br><br>
+                                <strong>Notice</strong>: The argument must an integer.</p>
+                              <p>For example:</p>
+                                
+                                <code>
+                                  numbers= list(range(5,10,2))<br>
+                                  print(numbers)
+                                </code>
+
+                                <p>The output of this code will be  [5,7,9].</p>
+                                <img src="{% static 'tutorial/images/range.png' %}">
+
+                              <hr>
+
+                              <h4 id="Functions">Functions</h4>
+                              <p>Any statement that consists of a word followed by information in parenthesis is a function call. For example:</p>
+                              <code>print('hello')</code>
+                              <p>In addition to the predefined functions, we can create our own functions by using the def statement. Let’s see an example.</p>
+                              <code>
+                                def greetings():<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;print('Hey')<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;print('Hellooooo')<br><br>
+                                greetings()
+                              </code>
+                              <p>
+                                The first three lines are the function definition, and the last line is the function call. You can call the function whenever you want, once it is defined.<br>
+                                When we call this method, the output will be:
+                              </p>
+                              <img src="{% static 'tutorial/images/f1.png' %}">
+
+                              <p>The statements in the function are executed only when they are called. We must define our functions before we call them.</p>
+                              <p>Functions can take 1 or more arguments. For example:</p>
+
+                              <code>def add(x,y):<br>
+                                &nbsp;&nbsp;print(x+y)<br><br>
+                            add(5,8)<br></code>
+
+                            <p>This function adds two numbers (5 & 8) and print their sum (13).</p>
+
+                            <img src="{% static 'tutorial/images/f2.png' %}">
+
+                            <p>Certain functions return a value that can be used later. To do this, we can use the return statement.</p>
+                            <p>Let’s see an example function to find the largest of two numbers</p>
+                            <code>
+                              def max(x,y):<br>
+                              &nbsp;&nbsp; if x>=y:<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp; return x<br>
+                              &nbsp;&nbsp;else:<vr></vr>
+                              z=max(8,5)<br>
+                              print(z)
+                            </code>
+                            <p>This code will produce an output 8</p>
+                            <p>When a function finds a return statement, it immediately stops its execution. The function will not consider the code that we write after the return statement.</p>
+                            <img src="{% static 'tutorial/images/f3.png' %}">
+
+                            <hr>
+
+                            <h4 id="Strings">Strings</h4>
+                            <p>A string is created by entering a text between two single or double-quotes.
+                              For example: 
+                              <ol>
+                                <li>“Pythonista Planet”</li>
+                                <li>‘Learn Python Basics’</li>
+                              </ol>
+                            </p>
+
+                            <ol>
+                              <li><strong>Concatenation</strong></li>
+                              <p>We can join together two strings using the + operator. For example:<br>
+                                ‘Pythonista’ + ‘Planet’ = ‘Pythonista Planet’</p>
+                              <p>We can also multiply strings in Python. For example:<br>
+                                ‘mango’ * 3  =  ‘mangomangomango’</p>
+
+                              <p>To get the letters of a string separately, we can use the index of the letter inside square brackets. For example:<br>
+                                ‘python'[0]  = 'p'</p>
+                                <img src="{% static 'tutorial/images/s1.png' %}">
+
+
+                              <li><strong>Slicing</strong></li>
+                              <p>To slice a string, use the starting and ending index inside square brackets [start:stop]). For example:<br>
+                                ‘python'[0:2] = ‘py’ and  ‘python'[0:4] = ‘pyth’</p>
+                              <p>If we want to slice the string from the other end, we can do that by using negative numbers. For example:<br>
+                                ‘python'[-1] = ‘n’ and  ‘python'[0:-1] = ‘pytho’</p>
+                              <p>We can also slice the string by doing stepping [start:stop:step ]. For example:<br>
+                                ‘python'[0:-1:2] = ‘pto’ and ‘howareyou'[0:-1:3] = ‘hay’</p>
+                            </ol>
+                            <img src="{% static 'tutorial/images/s2.png' %}">
+
+                            <li><strong>Splitting</strong></li>
+                            <p> To split a sentence into a list of words, we can use the split() method.</p>
+                            <code>sentence = "Pythonista Planet"<br>
+                              words = sentence.split()<br>
+                              print(words)<br></code>
+
+                            <p>This will produce the output: [‘Pythonista’,’Planet’]</p>
+                            <img src="{% static 'tutorial/images/s3.png' %}">
+
+                            <hr>
+
+                            <h4 id="Lists">Lists</h4>
+                            <p>If we want to store a set of items in an arranged order, we can use lists in Python. We can create a list by using square brackets with items inside. <br>
+                              We can use commas to separate each item. If we want to access a particular item in a lost, we can do that by using the index of that item in square brackets. For example: </p>
+                              <code>words= ['Hello','world','how','are','you']<br>
+                                print(words[0])<br></code>
+                            <p> This will produce an output ‘Hello‘</p>
+                            <p>Often, a list contains items of the same type. But, we can also create a list that includes different types of items as well. Lists can also be nested within other lists. Let’s see an example:</p>
+                            <code>things= ['mango',0,[1,2],4.56]<br>
+                              print(things[2][1])</code>
+
+                            <p>This will produce the output: 2</p>
+
+                            <p>Strings can also be indexed like lists. For example:</p>
+                            <code>
+                              message="hello world"<br>
+                              print(message[6])
+                            </code>
+                            <p> This code will produce an output ‘w’</p>
+
+                            <img src="{% static 'tutorial/images/s4.png' %}">
+
+                            <hr>
+
+                            <h4 id="List_functions">List functions</h4>
+                            <ul>
+                              <li><strong>Append </strong></li>
+                              <p>The append method adds an item to the end of an existing list. For example:</p>
+                              <code>
+                                numbers= [1,2,3]<br>
+                                numbers.append(4)<br>
+                                print(numbers)
+                              </code>
+                              <p> This code will produce the output: [1,2,3,4]</p>
+
+                              <li><strong>Insert</strong></li>
+                              <p>The insert method allows inserting a new item to the end of an existing list. For example:</p>
+                              <code>
+                                words = ['python','fun']<br>
+                                words.insert(1,'is')     # (position,item)<br>
+                                print(words)
+                              </code>
+                              <p> The output of this code will be: [‘python’,’is’,’fun’]</p>
+
+                              <li><strong>Len</strong></li>
+                              <p>If we want to get the number of items in a list, we can use the len method. For example:</p>
+                              <code>
+                                numbers= [1,2,3,4,5]<br>
+                                print(len(numbers))
+                              </code>
+                              <p>
+                                The output will be 5
+                              </p>
+                              <img src="{% static 'tutorial/images/l1.png' %}">
+
+                              <p>There are a few more useful functions and methods for lists like: </p>
+                              <div class="table-responsive"> 
+                                <table class="table">
+                                  <thead>
+                                    <tr>
+                                      <th>Methods</th>
+                                      <th>Description</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>max (list)</td>
+                                      <td>Maximum value from a list
+                                  </td>
+                                    </tr>
+                                    <tr>
+                                      <td>min (list)</td>
+                                      <td>minimum value from a list</td>  
+                                    </tr>
+                                    <tr>
+                                      <td>list.remove(item)</td>
+                                      <td>remove an item from a list</td>  
+                                    </tr>
+                                    <tr>
+                                      <td>list.reverse()</td>
+                                      <td>reverse a list</td>  
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </ul>
+
+                            <hr>
+
+                            <h4 id="Dictionaries">Dictionaries</h4>
+                            <p>Dictionaries are a special type of data structure in python. They are used to store key-value pairs. So if you put in a key, it gives back the value.</p>
+                            <p>The syntax of dictionaries would look like this:</p>
+                            <p>{key1: value1, key2: value,…}</p>
+                            <p>For example, if we want to create a phonebook, then we will create a dictionary like this:</p>
+                            <code>
+                              phone_book = {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;'John' : '8592000000',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;'Bob' : '7994000000',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;'Elisa' : '9749777777'<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;}
+                            </code>
+                            <p>After that, if we go to the contacts and types in the name, it will give you the phone number.</p>
+                            <code>print(phone_book['John'])</code>
+                            <p>Then, the output will be: ‘8592000000’</p>
+                            <img src="{% static 'tutorial/images/d1.png' %}">
+
+                            <p>What if we want to store more values along with phone number, say we want to add email too. Then, we use lists inside dictionaries.</p>
+                            <code>
+                              phone_book = {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;'John' : ['8592000000', 'john@xyzmail.com'],<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;'Bob' :  ['7994000000', 'bob@xyzmail.com'],<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;'Elisa' : [ '9749777777' , 'elisa@xyzmail.com']<br>
+                              }<br>
+                              print(phone_book['John'])
+                            </code>
+                            <p>The output of this code will be: ‘8592000000’, ‘john@xyzmail.com’</p>
+                            <p>What if we want only the phone number of John from this dictionary. Then we use the index of the list. For example:</p>
+                            <code>
+                              print(phone_book['John'][0])
+                            </code>
+                            <p>The output will be: ‘8592000000’</p>
+                            <img src="{% static 'tutorial/images/d2.png' %}">
+
+                            <ol>
+                              <li><strong>Adding a new item into the dictionary</strong></li>
+                              <p>Let’s see how we can add a new key-value to this dictionary. We can do this by writing the following line of code.</p>
+                              <code>
+                                phone_book['Adam'] = '9567974800'
+                              </code>
+                              <p>Now, imagine that one person in your phonebook changed his phone number to another one. So, in that case, we want to update our dictionary, right?</p>
+                              <code>phone_book['John'] = '1567933400'</code>
+                              <p>Now, John’s phone number is changed to ‘1567933400’</p>
+
+                              <li><strong>Looping through a dictionary</strong></li>
+                              <p>We can loop through a dictionary using the following syntax</p>
+                              <code>
+                                for k,v in phone_book.items():<br>
+                                &nbsp;&nbsp;print(k, ":", v) 
+                              </code>
+                              <p>Here, k and v represent key and value respectively</p>
+                              <img src="{% static 'tutorial/images/d3.png' %}">
+                            </ol>
+
+                            <hr>
+
+                            <h4 id="Tuples">Tuples</h4>
+                            <p>Tuples are very similar to lists, except that they are immutable, that is, they can’t be changed once defined. Also, they are represented using parentheses rather than square brackets.</p>
+                            <p>Trying to change a value in the tuple causes TypeError since they are immutable.<br> 
+                              Tuples can be nested within each other, just like lists.<br> 
+                              Tuples are faster than lists.</p>
+                            <code>exam_register_numbers = ('15001147', '15001148')</code>
+                            <p>If you want to access the values in the tuple, you can do that using the corresponding indices.</p>
+                            <code>print(exam_register_numbers[0])</code>
+                            <p>The output will be: ‘15001147’</p>
+                            <img src="{% static 'tutorial/images/d4.png' %}">
+
+                            <hr>
+
+                            <h4 id="Mutable_Immutable">Mutable vs Immutable Data Types</h4>
+                            <ol>
+                              <li>
+                                <strong>Mutable</strong> data types are those that can be <strong>changed</strong>
+                              </li>
+                            
+                            <p>For example, <strong>lists</strong> & <strong>dictionaries</strong> are mutable</p>
+                            <code>countries = ['India', 'Poland', 'Germany']<br>
+                              countries[2] = 'U.S.A'<br>
+                              print(countries)</code>
+                            
+                            <li>
+                              <strong>Immutable</strong> data types are those that can <strong>not</strong> be <strong>changed</strong>
+                            </li>
+                            <p>Let’s look at the example: </p>
+                            <code>
+                              ucl_semifinal = ('Real_Madrid', 'Liverpool', 'Bayern_Munich', 'Roma')<br>
+                              ucl_semifinal[3] = 'Barcelona'<br>
+                              print(ucl_semifinal)
+                            </code>
+                            <p>In this case, the second line shows a TypeError. </p>
+                            <img src="{% static 'tutorial/images/i1.png' %}">
+                          </ol>
+                            
+                          <hr>
+
+                          <h4 id="Sets">Sets in Python</h4>
+                          <p>A set is an <strong>unordered</strong> collection of items. <strong>All</strong> the elements in a set are <strong>unique</strong> and <strong>immutable</strong>.<br> 
+                            However, the <strong>set</strong> itself is <strong>mutable</strong>.<br> 
+                            We can <strong>insert</strong> or <strong>delete</strong> items from it if we want.<br>
+                            A set is created by placing all the items inside curly braces, and the items are separated by a comma.</p>
+                            <code>groceries = {'apple', 'milk', 'chicken'}</code>
+
+                          <p>A set can have <strong>different</strong> types of items. We can <strong>not access</strong> or <strong>change</strong> an element of a set using <strong>indexing</strong> or <strong>slicing</strong>.</p>
+
+                          <div class="table-responsive"> 
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Methods</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>add()</td>
+                                  <td>Add a single element</td>
+                                </tr>
+                                <tr>
+                                  <td>update()</td>
+                                  <td>Add multiple elements</td>
+                                </tr>
+                                <tr>
+                                  <td>discard() & remove()</td>
+                                  <td>Remove a particular item from the set</td>
+                                </tr>
+                                <tr>
+                                  <td>pop()</td>
+                                  <td>Remove & return an item</td>
+                                </tr>
+                                <tr>
+                                  <td>clear()</td>
+                                  <td>Remove all items from a set</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <code>groceries = {'apple', 'mango', 'apple'}<br>
+                            print(groceries)</code>
+                          
+                            <p> The output will be: {‘apple’,’mango’} , since every element is <strong>unique</strong>.</p>
+                            <img src="{% static 'tutorial/images/set1.png' %}">
+                            <p>Sets can also perform <strong>mathematical</strong> set <strong>operations</strong> like: 
+                              <ol>
+                                <li>union</li>
+                                <li>intersection</li>
+                                <li>symmetric difference</li>
+                              </ol></p>
+
+                            <code>A = {2,3}<br>
+                              B = {1,2}<br>
+                              print(A|B)<br>
+                              print(A&B)<br>
+                              print(A-B)
+                            </code>
+                            <p> The output of this program will be:</p>
+                            <img src="{% static 'tutorial/images/set2.png' %}">
+
+                            <hr>
+                            
+                            <h4 id="String_Formatting">String Formatting</h4>
+                            <p>Now, let’s move to the next level of Python basics.<br>
+                              A little more advanced concepts like string formatting and exception handling.
+                              <ol>
+                                <li><strong>String formatting</strong></li>
+                              
+                              Provides a powerful way to combine non-strings within strings. It uses the <strong>format()</strong> method to substitute a number of arguments in the string.  
+                              <br>Let’s see an example:</p>
+                              <code>
+                                fruits=['apple','orange','mango']<br>
+                                bucket = "The fruits inside the bucket are : {0} , {1} and {2}".format(fruits[0],fruits[1],fruits[2])<br>
+                                print(bucket)
+                              </code>
+                              <p>The output of this piece of code will be: ‘The fruits inside the bucket are apple, orange, and mango’</p>
+                              <img src="{% static 'tutorial/images/set3.png' %}">
+
+                              <p>Each argument of the format() method is placed in the string at the corresponding positions, which is determined using the curly braces {}.
+                                We can also do string formatting with named arguments. Let’s see an example:<br></p>
+                                <code>goals= "Ronaldo : {rono} , Messi : {leo} ".format(rono=28,leo=27)<br>
+                                  print(goals)</code>
+                              
+                              <p>The output will be: ‘Ronaldo: 28, Messi: 27’. Let’s see one more example case:</p>
+                              <code>print("{0}{1}{0}".format("abra","cad"))</code>
+                              <p> The output for this code is ‘abracadabra’.</p>
+                              <img src="{% static 'tutorial/images/set4.png' %}">
+
+                              <li><strong>Exception Handling</strong></li>
+                              <p>We can handle exceptions in Python using <strong>try-except</strong> statements.<br> An exception is an event that occurs due to incorrect code or input.<br> 
+                                When an <strong>exception</strong> occurs, the program immediately stops. Exception handling is useful when dealing with user inputs.</p>
+                              
+                              <p>The different types of exceptions are: </p>
+                              <div class="table-responsive"> 
+                                <table class="table">
+                                  <thead>
+                                    <tr>
+                                      <th>Exceptions</th>
+                                      <th>Description</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>ZeroDivisionError</td>
+                                      <td>Divide something by 0</td>
+                                    </tr>
+                                    <tr>
+                                      <td>ImportError</td>
+                                      <td>Import fails</td>
+                                    </tr>
+                                    <tr>
+                                      <td>IndexError</td>
+                                      <td>List is indexed with an out of range number</td>
+                                    </tr>
+                                    <tr>
+                                      <td>NameError</td>
+                                      <td>Use an unknown variable</td>
+                                    </tr>
+                                    <tr>
+                                      <td>SyntaxError</td>
+                                      <td>Code can’t be parsed properly</td>
+                                    </tr>
+                                    <tr>
+                                      <td>TypeError</td>
+                                      <td>Call a function on a value of inappropriate type</td>
+                                    </tr>
+                                    <tr>
+                                      <td>ValueError</td>
+                                      <td>Call a function on a value of the correct type, but with an inappropriate value</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+
+                              <ul>
+                                <li><strong>try-except</strong></li>
+                                <p>To handle exceptions and to call some code when an exception occurs, you can use a try/except statement. The try block contains the code that we want to test.<br>
+                                  If that exception occurs, the code in the try block stops its execution and the code in the except block runs.<br> 
+                                  The code in the except block will not run if there are no errors.</p>
+                                  <code>
+                                    try:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;num1 = 7<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;num2 = 0<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;print(num1/num2)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;print("Done calculation")<br>
+                                    except ZeroDivisionError:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;print("Error! Do not divide by zero")
+                                  </code>
+                                
+                                  <p>The output will be: ‘Error! Do not divide by zero‘</p>
+                                  <img src="{% static 'tutorial/images/try1.png' %}">
+                                  <p>We can also use multiple except blocks at the same time to handle different exceptions. For example:</p>
+                                  <code>
+                                    try:<br>
+                                    &nbsp;&nbsp;mango=10<br>
+                                    &nbsp;&nbsp;print(mango+" juice")<br>
+                                    &nbsp;&nbsp;print(mango/2)<br>
+                                    except ZeroDivisionError:<br>
+                                    &nbsp;&nbsp;print(" Division by zero.")<br>
+                                    except (ValueError,TypeError):<br>
+                                    &nbsp;&nbsp;print("Error")
+                                  </code>
+                                  <p>The output will be: ‘Error‘</p>
+                                  <img src="{% static 'tutorial/images/try2.png' %}">
+
+                                  <p>We can simply put an except statement without specifying any exceptions. It will catch all the errors.<br> 
+                                    This should be used sparingly, as they can catch unexpected errors and may hide programming mistakes.</p>
+                                  
+                                    <code>
+                                      try:<br>
+                                      &nbsp;&nbsp;mango = " juice "<br>
+                                      &nbsp;&nbsp;print(mango/0)<br>
+                                      except:<br>
+                                      &nbsp;&nbsp;print("Error")
+                                    </code>
+                                  
+                                    <p>The output will be: ‘ Error ‘</p>
+                                    <img src="{% static 'tutorial/images/try3.png' %}">
+
+                                <li>finally</li>
+                                <p>We can use the finally statement at the end of a try/except block to ensure that some code will run even if there are errors.</p>
+                                <code>
+                                  try:<br>
+                                  &nbsp;&nbsp;print("Hello")<br>
+                                  &nbsp;&nbsp;print(1/0)<br>
+                                  except ZeroDivisionError:<br>
+                                  &nbsp;&nbsp;print(" Division by zero ")<br>
+                                  finally:<br>
+                                  &nbsp;&nbsp;print("This code will run always")
+                                </code>
+                                <p>The output of this python code will be: </p>
+                                <p>‘ Hello ‘ </p>
+                                <p>‘Division by zero’</p>
+                                <p>‘ This code will run always ‘</p>
+                                <img src="{% static 'tutorial/images/try4.png' %}">
+                              </ul>
+                            </ol>
+
+                            <hr>
+
+                            <h4 id="Modules ">Modules</h4>
+                            <p>Some great developers have written a lot of code to simplify common tasks. Those pieces of code are called <strong>modules</strong>. These are also called <strong>libraries</strong>.<br>
+                              Modules are kind of like this. Some genius people have already spent their sleepless nights writing code in order to make your life easier.<br>
+                              You can just import the modules and call some methods to do the tasks. Problem solved in just two or three lines of code.</p>
+
+                              <p>You can use a Python module with the help of the import statement. Include ‘import module_name‘ at the beginning of the code. Then you can use the functions and values available in the module using the dot operator.<br>
+                                Consider an example of using the <strong>random</strong> module.</p>
+
+                              <code>
+                                import random<br>
+                                for i in range(5):<br>
+                                &nbsp;&nbsp;value= random.randint(90,99)<br>
+                                &nbsp;&nbsp;print(value)
+                              </code>
+                              <p>The output of this code will be some other random values between 90 and 99.</p>
+                              <img src="{% static 'tutorial/images/m1.png' %}">
+
+                              <p>If you need only certain methods or values from a module, you can use the format: ‘from module_name import function_name’.</p>
+
+                              <code>from math import sqrt,pi</code>
+                              <p>By using the ‘as’ statement, we can import a module under a different name. This can be used when a module or function has a long or confusing name.</p>
+                              <code>from math import sqrt as square_root</code>
+                              <p>Trying to import a module that is not available will cause ImportError.</p>
+                              <p>There are three main types of modules in Python: those you write yourself, those you install from external sources, and those that are pre-installed with Python.</p>
+                              <ul>
+                                <li><strong>Standard Library</strong></li>
+                                <p>The modules that are pre-installed with Python constitute the standard library. Some of the standard library’s useful modules are:
+                                  <ul>
+                                    <li>string</li>
+                                    <li>turtle </li>
+                                    <li>math</li>
+                                    <li>random</li>
+                                    <li>datetime</li>
+                                    <li>os</li>
+                                    <li>multiprocessing</li>
+                                    <li>socket</li>
+                                    <li>email</li>
+                                    <li>json</li>
+                                    <li>doctest</li>
+                                  </ul> 
+                                  Python’s standard library is one of its main strengths as a programming language.</p>
+                              </ul>
+                  </div>
+              </div>
+          </main>
+      </div>
+  </div>
+    {% endblock %}
